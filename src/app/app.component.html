@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <span> My Application </span> &nbsp;&nbsp;&nbsp;
+  <button mat-raised-button color="primary" routerLink="/"> Home </button>
+  <button mat-raised-button color="primary" *ngIf="isAuthenticated"  routerLink="/shopping-list"> Shopping List </button>
+  <button mat-raised-button color="primary" *ngIf="!isAuthenticated" (click)="login()"> Login </button>
+  <button mat-raised-button color="primary" *ngIf="isAuthenticated" (click)="logout()"> Logout </button>
+</mat-toolbar>
+<router-outlet></router-outlet>
